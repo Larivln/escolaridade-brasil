@@ -55,7 +55,7 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "e",
+                    "Name": "p",
                     "Entity": "PNAD",
                     "Type": 0
                   }
@@ -69,7 +69,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "e"
+                                  "Source": "p"
                                 }
                               },
                               "Property": "Faixa etária"
@@ -81,20 +81,6 @@
                             {
                               "Literal": {
                                 "Value": "'25 a 39 anos'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'40 a 59 anos'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'60 anos ou mais'"
                               }
                             }
                           ]

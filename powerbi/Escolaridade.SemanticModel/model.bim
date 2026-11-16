@@ -24,9 +24,16 @@
     "expressions": [
       {
         "name": "PastaDados",
-        "kind": "m",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
         "description": "Pasta onde está o escolaridade_powerbi.csv (termina com \\). Troque em Página Inicial > Transformar dados > Editar parâmetros.",
-        "expression": "\"C:\\caminho\\para\\escolaridade-brasil\\dados\\\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+        "expression": "\"C:\\caminho\\para\\escolaridade-brasil\\dados\\\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "1333bae3-6fcc-4822-8ae7-775bd1273f20"
       }
     ],
     "sourceQueryCulture": "pt-BR",
