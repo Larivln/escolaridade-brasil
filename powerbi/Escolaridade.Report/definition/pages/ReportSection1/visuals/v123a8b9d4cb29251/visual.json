@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v123a8b9d4cb29251",
+  "position": {
+    "x": 648,
+    "y": 248,
+    "z": 1200,
+    "height": 200,
+    "width": 616
+  },
+  "visual": {
+    "visualType": "hundredPercentStackedBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PNAD"
+                    }
+                  },
+                  "Property": "Classe social"
+                }
+              },
+              "queryRef": "PNAD.Classe social",
+              "nativeQueryRef": "Classe social",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PNAD"
+                    }
+                  },
+                  "Property": "Etapa de ensino"
+                }
+              },
+              "queryRef": "PNAD.Etapa de ensino",
+              "nativeQueryRef": "Etapa de ensino"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PNAD"
+                    }
+                  },
+                  "Property": "População"
+                }
+              },
+              "queryRef": "PNAD.População",
+              "nativeQueryRef": "População"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Etapa de ensino por classe social'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

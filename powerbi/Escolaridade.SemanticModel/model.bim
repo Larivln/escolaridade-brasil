@@ -1,0 +1,291 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"PastaDados\",\"PNAD\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "pt-BR",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "PastaDados",
+        "kind": "m",
+        "description": "Pasta onde está o escolaridade_powerbi.csv (termina com \\). Troque em Página Inicial > Transformar dados > Editar parâmetros.",
+        "expression": "\"C:\\caminho\\para\\escolaridade-brasil\\dados\\\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "sourceQueryCulture": "pt-BR",
+    "tables": [
+      {
+        "name": "PNAD",
+        "columns": [
+          {
+            "name": "Ano",
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "de6d15da-f880-42dc-8415-cb4eeabed0d3",
+            "sourceColumn": "Ano",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trimestre",
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "8b2fbfd1-d906-4b2f-aa34-ad4614fc0edd",
+            "sourceColumn": "Trimestre",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Período",
+            "dataType": "string",
+            "lineageTag": "a57a7abf-5daa-4978-9166-8f6f806230cd",
+            "sourceColumn": "Período",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "UF",
+            "dataCategory": "StateOrProvince",
+            "dataType": "string",
+            "lineageTag": "bc7d8b74-3760-4386-88e9-77fd5ddcf60e",
+            "sourceColumn": "UF",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Região",
+            "dataType": "string",
+            "lineageTag": "17146008-d792-4a36-a74c-55dc40561fa8",
+            "sourceColumn": "Região",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Gênero",
+            "dataType": "string",
+            "lineageTag": "47b36355-00a0-4786-94a6-367bbda7cc72",
+            "sourceColumn": "Gênero",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cor/raça",
+            "dataType": "string",
+            "lineageTag": "c9b6bb69-2b5b-4350-afec-908a1d0c6d49",
+            "sourceColumn": "Cor/raça",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "faixa_etaria_ordem",
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "439e1737-43c9-4868-bedd-87cb0cfbbb32",
+            "sourceColumn": "faixa_etaria_ordem",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Faixa etária",
+            "dataType": "string",
+            "lineageTag": "7695e007-5235-4df5-bc09-2b672697e1a3",
+            "sortByColumn": "faixa_etaria_ordem",
+            "sourceColumn": "Faixa etária",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "escolaridade_ordem",
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "167ae41c-932f-40f9-8932-79727a0d6e06",
+            "sourceColumn": "escolaridade_ordem",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Escolaridade",
+            "dataType": "string",
+            "lineageTag": "749ec576-1457-4166-8602-a2a3bda2dea0",
+            "sortByColumn": "escolaridade_ordem",
+            "sourceColumn": "Escolaridade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Etapa de ensino",
+            "dataType": "string",
+            "lineageTag": "1a79fb33-bc4f-4d61-a708-24ba3ec5e84e",
+            "sortByColumn": "etapa_ensino_ordem",
+            "sourceColumn": "Etapa de ensino",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "classe_ordem",
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "95c373ee-1a50-4c95-8143-69834a823824",
+            "sourceColumn": "classe_ordem",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Classe social",
+            "dataType": "string",
+            "lineageTag": "c45be9f2-cfbc-44a7-ae4b-8a381360de33",
+            "sortByColumn": "classe_ordem",
+            "sourceColumn": "Classe social",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "populacao",
+            "dataType": "double",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "b6e4118b-7e72-417e-b73e-bfac401a72d3",
+            "sourceColumn": "populacao",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "amostra",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "99baf934-afcd-4451-8026-9a62071db404",
+            "sourceColumn": "amostra",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "soma_anos_estudo",
+            "dataType": "double",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "3436f7c6-e656-416b-8bac-013d8873575e",
+            "sourceColumn": "soma_anos_estudo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "populacao_anos_estudo",
+            "dataType": "double",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "30cffbda-27b0-48d1-86dd-5662e7be0fdf",
+            "sourceColumn": "populacao_anos_estudo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "soma_renda",
+            "dataType": "double",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "6f7c3176-12a6-4fd6-8b81-61bbfa5193ce",
+            "sourceColumn": "soma_renda",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "populacao_com_renda",
+            "dataType": "double",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "86fe6867-7203-4744-98f5-25f469116964",
+            "sourceColumn": "populacao_com_renda",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "etapa_ensino_ordem",
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "777172a7-78b1-439e-8ca6-ccf7a2bc5a84",
+            "sourceColumn": "etapa_ensino_ordem",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "7b7eab42-6bcc-4112-acfa-466852f75852",
+        "measures": [
+          {
+            "name": "População",
+            "expression": "SUM(PNAD[populacao])",
+            "formatString": "#,0",
+            "lineageTag": "bba5779c-d2b6-459c-962e-5b640fd2e1c3"
+          },
+          {
+            "name": "% da População",
+            "expression": "DIVIDE([População], CALCULATE([População], ALL(PNAD[Escolaridade], PNAD[escolaridade_ordem], PNAD[Etapa de ensino], PNAD[etapa_ensino_ordem])))",
+            "formatString": "0.0%",
+            "lineageTag": "e8b44eab-498a-42d2-9e02-e4f37d2ff2f6"
+          },
+          {
+            "name": "% Superior Completo",
+            "description": "Pessoas com graduação completa ou mais (especialização, mestrado, doutorado), entre quem tem nível de instrução informado.",
+            "expression": [
+              "DIVIDE(",
+              "    CALCULATE([População], PNAD[escolaridade_ordem] >= 7),",
+              "    CALCULATE([População], PNAD[escolaridade_ordem] >= 1)",
+              ")"
+            ],
+            "formatString": "0.0%",
+            "lineageTag": "c7fcdc97-dee0-4326-849c-754c64780b10"
+          },
+          {
+            "name": "% Pós-graduação",
+            "description": "Pessoas com especialização, mestrado ou doutorado.",
+            "expression": [
+              "DIVIDE(",
+              "    CALCULATE([População], PNAD[escolaridade_ordem] >= 8),",
+              "    CALCULATE([População], PNAD[escolaridade_ordem] >= 1)",
+              ")"
+            ],
+            "formatString": "0.0%",
+            "lineageTag": "bd6ddbea-e267-48b6-938e-c880493d495e"
+          },
+          {
+            "name": "Média Anos de Estudo",
+            "expression": "DIVIDE(SUM(PNAD[soma_anos_estudo]), SUM(PNAD[populacao_anos_estudo]))",
+            "formatString": "0.0",
+            "lineageTag": "5a4b1bec-5ef5-45bd-97ea-648b016f40b1"
+          },
+          {
+            "name": "Renda Média do Trabalho",
+            "expression": "DIVIDE(SUM(PNAD[soma_renda]), SUM(PNAD[populacao_com_renda]))",
+            "formatString": "\"R$ \"#,0.00",
+            "lineageTag": "fc2ebe34-db02-467e-ac7c-078a967db12a"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "PNAD",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Csv.Document(File.Contents(PastaDados & \"escolaridade_powerbi.csv\"), [Delimiter=\";\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Cabecalhos = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
+                "    Tipos = Table.TransformColumnTypes(Cabecalhos, {{\"ano\", Int64.Type}, {\"trimestre\", Int64.Type}, {\"periodo\", type text}, {\"uf\", type text}, {\"regiao\", type text}, {\"genero\", type text}, {\"cor_raca\", type text}, {\"faixa_etaria_ordem\", Int64.Type}, {\"faixa_etaria\", type text}, {\"escolaridade_ordem\", Int64.Type}, {\"escolaridade\", type text}, {\"etapa_ensino\", type text}, {\"classe_ordem\", Int64.Type}, {\"classe_social\", type text}, {\"populacao\", type number}, {\"amostra\", Int64.Type}, {\"soma_anos_estudo\", type number}, {\"populacao_anos_estudo\", type number}, {\"soma_renda\", type number}, {\"populacao_com_renda\", type number}}, \"pt-BR\"),",
+                "    EtapaOrdem = Table.AddColumn(Tipos, \"etapa_ensino_ordem\", each",
+                "        if [etapa_ensino] = \"Sem instrução\" then 1",
+                "        else if [etapa_ensino] = \"Educação básica\" then 2",
+                "        else if [etapa_ensino] = \"Ensino superior\" then 3",
+                "        else if [etapa_ensino] = \"Pós-graduação\" then 4",
+                "        else 5, Int64.Type),",
+                "    Renomeado = Table.RenameColumns(EtapaOrdem, {{\"ano\", \"Ano\"}, {\"trimestre\", \"Trimestre\"}, {\"periodo\", \"Período\"}, {\"uf\", \"UF\"}, {\"regiao\", \"Região\"}, {\"genero\", \"Gênero\"}, {\"cor_raca\", \"Cor/raça\"}, {\"faixa_etaria\", \"Faixa etária\"}, {\"escolaridade\", \"Escolaridade\"}, {\"etapa_ensino\", \"Etapa de ensino\"}, {\"classe_social\", \"Classe social\"}})",
+                "in",
+                "    Renomeado"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

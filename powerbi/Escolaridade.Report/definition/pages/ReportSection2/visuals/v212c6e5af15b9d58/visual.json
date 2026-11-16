@@ -1,0 +1,111 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v212c6e5af15b9d58",
+  "position": {
+    "x": 16,
+    "y": 402,
+    "z": 2100,
+    "height": 310,
+    "width": 616
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PNAD"
+                    }
+                  },
+                  "Property": "Cor/raça"
+                }
+              },
+              "queryRef": "PNAD.Cor/raça",
+              "nativeQueryRef": "Cor/raça",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PNAD"
+                    }
+                  },
+                  "Property": "Gênero"
+                }
+              },
+              "queryRef": "PNAD.Gênero",
+              "nativeQueryRef": "Gênero"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PNAD"
+                    }
+                  },
+                  "Property": "Média Anos de Estudo"
+                }
+              },
+              "queryRef": "PNAD.Média Anos de Estudo",
+              "nativeQueryRef": "Média Anos de Estudo"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Média de anos de estudo, por cor/raça e gênero'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
